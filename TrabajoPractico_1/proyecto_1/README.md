@@ -1,3 +1,2 @@
-### Plantilla inicial de proyecto
-
-El contenido de este README debe reemplazarse con una breve descripción del proyecto
+Trivia de Peliculas en la cual hay que elegir dentre tres opcines de peliculas la opcion correcta, dependiendo la frase.
+contiene lista de peluclas y datos de las partidas jugadas

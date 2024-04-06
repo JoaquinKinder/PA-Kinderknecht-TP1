@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>¿A que pelicula corresponde esta frase?</h2><br>
+        <form action="{{url_for('respuesta')}}" method="POST">
+            <h3>{{correcta[0]}}</h3>
+            <button type="submit" id="opcion_1" name="opcion" value="{{opciones[0]}}" required>{{opciones[0]}}</button> <br>
+            <button type="submit" id="opcion_2" name="opcion" value="{{opciones[1]}}" required>{{opciones[1]}}</button> <br> 
+            <button type="submit" id="opcion_3" name="opcion" value="{{opciones[2]}}" required>{{opciones[2]}}</button> <br> 
+        </form>
+</body>
+</html>

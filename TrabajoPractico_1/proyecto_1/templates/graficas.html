@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Graficas estadisticas de las ultimas partidas</h1>
+    <img src="{{ url_for('static', filename='grafica_acumulados.png') }}">
+    <img src="{{ url_for('static', filename='grafica_porcentajes.png') }}">
+    <h4>Descargar graficas</h4>
+    <a href="./static/grafica_acumulados.pdf" download>
+        <button>Descargar Gráfica de Aciertos y Desaciertos por Fecha</button>
+    </a>
+
+    <a href="./static/grafica_porcentajes.pdf" download>
+        <button>Descargar Gráfica de Aciertos y Desaciertos Totales</button>
+    </a>
+    <br>
+    <form action="{{url_for('inicio')}}" method="POST">
+        <input type="submit" value="Volver al inicio">
+    </form>
+</body>
+</html>

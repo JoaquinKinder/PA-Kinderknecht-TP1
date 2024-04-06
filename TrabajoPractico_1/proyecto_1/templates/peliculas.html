@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Peliculas</h1>
+    <ul>
+        {% for peli in pelis_sin_r %}
+            <li> {{ peli }} </li>
+        {% endfor %}
+    </ul> 
+    <form action="{{url_for('inicio')}}" method="POST">
+        <input type="submit" value="Volver al inicio">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+</head>
+<body>
+    <h1>Trivia de Peliculas</h1>
+    <h4>EL JUEGO CONSISTE EN ELEGIR A QUE PELICULA CORRESPONDE LA FRASE DE ENTRE 3 OPCIONES</h4>
+    <form action="{{url_for('trivia')}}" method="POST">
+        <label for="usuario">Usuario:</label><br>
+        <input type="text" id="usuario" name="input_usuario" required><br>
+
+        <label for="num_preguntas">Ingrese el numero de frases de peliculas (minimo 3):</label><br>
+        <input type="number" id="num_preguntas" name="input_num_preguntas" required min="3" max="53"><br>
+        <br>
+        <input type="submit" value="Iniciar Trivia"> 
+    </form>
+    <br>
+    <form action="{{url_for('puntuaciones')}}">
+        <input type="submit" value="Ver Puntuaciones"> 
+    </form>
+    <br>
+    <form action="{{url_for('ver_peliculas')}}">
+        <input type="submit" value="Ver listado de peliculas"> 
+    </form>
+</body>
+</html>

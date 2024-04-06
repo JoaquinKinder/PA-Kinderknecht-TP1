@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Su Respuesta Fue:</h1>
+    {% if num_p != 0 %}
+        <form action="{{url_for('trivia')}}" method="POST">
+            <ul>{{resp}} la opcion correcta era {{correcta[1]}}</ul>
+            <input type="submit" value="Continuar">
+        </form>
+    {% else %}
+        <form action="{{url_for('inicio')}}" method="POST">
+            <ul>{{resp}} la opcion correcta era {{correcta[1]}}</ul><br>
+            <ul>respondio correctamente {{aciertos}} de un total de {{total_num}} preguntas</ul>
+            <input type="submit" value="Volver al inicio">
+        </form>
+    {% endif %}  
+</body>
+</html>
